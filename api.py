@@ -5,12 +5,11 @@ import requests
 import re
 import time
 
-from nltk.tokenize import sent_tokenize
 
 print('Hi there! This script allows you to get the lyrics of the song you are currently playing on Spotify.\n:) \n')
 time.sleep(2)
 scope = 'user-read-currently-playing'
-token = spotipy.util.prompt_for_user_token('USERNAME, SPOTIPY_CLIENT_ID, SPOTIPY_CLIENT_SECRET, SPOTIPY_REDIRECT_URI
+token = spotipy.util.prompt_for_user_token('USERNAME', 'SPOTIPY_CLIENT_ID', 'SPOTIPY_CLIENT_SECRET', 'SPOTIPY_REDIRECT_URI'
 )
 
 if token:

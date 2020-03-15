@@ -14,11 +14,11 @@ from kivy.clock import Clock
 #print('Hi there! This script allows you to get the lyrics of the song you are currently playing on Spotify.\n:) \n')
 time.sleep(1)
 scope = 'user-read-currently-playing'
-token = spotipy.util.prompt_for_user_token('31fh4k3mnjp7ikh4zzo6d5pacily',
+token = spotipy.util.prompt_for_user_token('Username',
                                                  'user-read-currently-playing',
-                                                 '4d64ac6e2a274e38b601e7a4c1c7a1d2',
-                                                 '46ae5d4d52cf4003a46f5316a68eef4b',
-                                                 'http://127.0.0.1/callback')
+                                                 'clientkey',
+                                                 'secretkey',
+                                                 'redirecturi')
 
 if token:
     sp = spotipy.Spotify(auth=token)
